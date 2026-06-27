@@ -9,7 +9,6 @@ export type Project = {
   stack: string[];
   highlights: string[];
   liveUrl: string;
-  // TODO: swap in your real GitHub repo URL once the project is pushed up.
   githubUrl: string | null;
 };
 
@@ -36,7 +35,7 @@ export const projects: Project[] = [
       "Responsive interaction swaps via gsap.matchMedia — full pinned/horizontal interactions on desktop, clean stacked layouts on mobile",
     ],
     liveUrl: "https://brancon.vercel.app",
-    githubUrl: null,
+    githubUrl: "https://github.com/joshuammbando636-ai/brancon",
   },
   {
     slug: "preetie-decor",
@@ -60,7 +59,7 @@ export const projects: Project[] = [
       "Centralized design tokens so the brand palette and type system stay consistent everywhere",
     ],
     liveUrl: "https://www.preetiedecor.com/",
-    githubUrl: null,
+    githubUrl: "https://github.com/joshuammbando636-ai/pretti",
   },
   {
     slug: "flowconvertlab",
@@ -84,6 +83,6 @@ export const projects: Project[] = [
       "Affiliate links carry correct rel=\"sponsored nofollow noopener\" attribution and site-wide disclosure — zero fabricated stats or testimonials",
     ],
     liveUrl: "https://www.flowconvertlab.com/",
-    githubUrl: null,
+    githubUrl: "https://github.com/joshuammbando636-ai/flowconvertlab",
   },
 ];

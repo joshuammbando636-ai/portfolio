@@ -77,7 +77,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
           </p>
         </Reveal>
         <Reveal delay={0.18}>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Magnetic strength={0.3}>
               <a
                 href={project.liveUrl}
@@ -89,6 +89,21 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 <span aria-hidden>↗</span>
               </a>
             </Magnetic>
+            {project.githubUrl ? (
+              <Magnetic strength={0.3}>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border-b border-espresso/30 pb-1 text-sm tracking-wide hover:border-espresso transition-colors duration-300"
+                >
+                  Source
+                  <span aria-hidden>↗</span>
+                </a>
+              </Magnetic>
+            ) : (
+              <span className="text-sm tracking-wide text-espresso/30">Source — coming soon</span>
+            )}
           </div>
         </Reveal>
       </section>
