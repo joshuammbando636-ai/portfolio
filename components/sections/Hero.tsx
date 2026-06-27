@@ -31,12 +31,11 @@ export default function Hero() {
         transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
       >
         <Image
-          src="/home/girl.jfif"
-          alt="Portfolio preview"
+          src="/home/me-hero.png"
+          alt="Joshua Mmbando"
           fill
           className="object-cover object-center"
           priority
-          unoptimized
         />
         {/* Dark overlay so headline text stays legible */}
         <div className="absolute inset-0 bg-ink/60" />
