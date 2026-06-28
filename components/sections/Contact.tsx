@@ -1,14 +1,16 @@
 "use client";
 
+import { FaGithub, FaLinkedin, FaUpwork } from "react-icons/fa6";
 import Reveal from "@/components/Reveal";
 import Magnetic from "@/components/Magnetic";
 import LottieCharacter from "@/components/LottieCharacter";
 
 const EMAIL = "joshua050mmbando@gmail.com";
 
-const socials: { label: string; href: string }[] = [
-  { label: "GitHub", href: "https://github.com/joshuammbando636-ai" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-mmbando-99a487404/" },
+const socials: { label: string; href: string; icon: React.ComponentType<{ size?: number }> }[] = [
+  { label: "GitHub", href: "https://github.com/joshuammbando636-ai", icon: FaGithub },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-mmbando-99a487404/", icon: FaLinkedin },
+  { label: "Upwork", href: "https://www.upwork.com/freelancers/~0112980472ad29790a", icon: FaUpwork },
 ];
 
 export default function Contact() {
@@ -54,16 +56,17 @@ export default function Contact() {
 
           {socials.length > 0 && (
             <Reveal delay={0.24}>
-              <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3">
+              <div className="mt-14 flex flex-wrap items-center gap-6">
                 {socials.map((social) => (
                   <Magnetic key={social.label} strength={0.35}>
                     <a
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm tracking-wide text-espresso/55 hover:text-espresso transition-colors duration-300"
+                      aria-label={social.label}
+                      className="text-espresso/55 hover:text-espresso transition-colors duration-300"
                     >
-                      {social.label}
+                      <social.icon size={22} />
                     </a>
                   </Magnetic>
                 ))}
