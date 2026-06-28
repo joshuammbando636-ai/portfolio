@@ -1,24 +1,23 @@
+"use client";
+
 import Reveal from "@/components/Reveal";
 import Magnetic from "@/components/Magnetic";
 import LottieCharacter from "@/components/LottieCharacter";
 
 const EMAIL = "joshua050mmbando@gmail.com";
 
-// TODO: add real social links once they exist — e.g.
-// { label: "GitHub", href: "https://github.com/your-handle" }
-// { label: "LinkedIn", href: "https://linkedin.com/in/your-handle" }
-const socials: { label: string; href: string }[] = [];
+const socials: { label: string; href: string }[] = [
+  { label: "GitHub", href: "https://github.com/joshuammbando636-ai" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/joshua-mmbando-99a487404/" },
+];
 
 export default function Contact() {
   return (
     <section id="contact" className="flex min-h-screen flex-col justify-center px-6 py-28 sm:px-10 sm:py-40 lg:px-16">
       <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-12">
         {/* Character — above the text on mobile, beside it on desktop */}
-        <div className="flex shrink-0 flex-col items-center md:order-2 md:w-[240px]">
+        <div className="flex shrink-0 justify-center md:order-2 md:w-[240px]">
           <LottieCharacter size={240} mobileSize={180} mobileBreakpoint={768} />
-          <p className="mt-3 font-display text-sm italic text-espresso/50">
-            Let&apos;s hop on this together.
-          </p>
         </div>
 
         <div className="flex-1">
@@ -41,6 +40,7 @@ export default function Contact() {
               <Magnetic strength={0.25}>
                 <a
                   href={`mailto:${EMAIL}`}
+                  onClick={() => window.dispatchEvent(new Event("contact-link-clicked"))}
                   className="group inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 font-display text-[7vw] sm:text-4xl lg:text-5xl font-semibold tracking-tight border-b border-espresso/25 pb-3 hover:border-espresso transition-colors duration-300 max-w-full break-all sm:break-normal"
                 >
                   {EMAIL}
