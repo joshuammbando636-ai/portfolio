@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "All business content — products, services, clients — lives in one typed data file, so adding a new product line is a one-line change, not a layout rewrite. And every scroll interaction is built on position: sticky instead of GSAP's DOM-mutating pin: true, which kept introducing layout jumps during development.",
     ],
     role: "Design & Front-End Development",
-    year: "2024",
+    year: "2025",
     stack: ["Next.js", "TypeScript", "GSAP", "Lenis", "EmailJS"],
     highlights: [
       "Replaced GSAP's pin: true with a sticky + measured-wrapper pattern across two pages, eliminating layout jank",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       "Because a client-rendered SPA is invisible to search engines by default, the site ships its own prerendering step that outputs static HTML per route, plus per-page metadata and a maintained sitemap, so the local-SEO searches that actually bring in bookings still work. Booking itself goes straight to WhatsApp — the channel clients in this market actually use — rather than a contact form.",
     ],
     role: "Design & Front-End Development",
-    year: "2024",
+    year: "2025–2026",
     stack: ["React", "TypeScript", "Vite", "styled-components"],
     highlights: [
       "Photo-first gallery experience instead of a copy-heavy homepage",
@@ -74,13 +74,14 @@ export const projects: Project[] = [
       "The trickiest bug was a sticky sidebar that refused to pin on the blog's article page — it turned out overflow-x: hidden on html/body was silently creating a new scroll container, which breaks position: sticky in any descendant. Switching to overflow-x: clip kept the horizontal-overflow protection without breaking the pin.",
     ],
     role: "Design & Front-End Development",
-    year: "2024",
+    year: "2026",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Lenis", "Framer Motion"],
     highlights: [
       "Floating bubble nav that morphs into a notification-style panel with a spring transition",
       "Blog built on a pinned scroll-spy table of contents, with only the article column scrolling",
       "Fixed a sticky-sidebar bug caused by overflow-x: hidden silently breaking position: sticky",
       "Affiliate links carry correct rel=\"sponsored nofollow noopener\" attribution and site-wide disclosure — zero fabricated stats or testimonials",
+      "Includes an in-depth LiveChat product review (rated 4.6/5) and head-to-head comparison pages built to help affiliate readers actually decide",
     ],
     liveUrl: "https://www.flowconvertlab.com/",
     githubUrl: "https://github.com/joshuammbando636-ai/flowconvertlab",

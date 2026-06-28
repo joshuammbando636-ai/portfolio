@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 const groups = [
   {
     label: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "Lenis", "Lottie"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP", "ScrollTrigger", "Framer Motion", "Lenis", "Lottie"],
   },
   {
     label: "Backend",
@@ -16,7 +16,7 @@ const groups = [
   },
   {
     label: "Design",
-    items: ["Photoshop", "Illustrator", "Visual identity", "Layout & typography"],
+    items: ["Photoshop", "Illustrator", "Figma", "Visual identity", "Layout & typography"],
   },
 ];
 

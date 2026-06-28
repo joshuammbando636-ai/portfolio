@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/Magnetic";
+import LottieCharacter from "@/components/LottieCharacter";
 
 const HEADLINE = [
   "I build fast,",
@@ -19,12 +19,12 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative grid min-h-screen grid-cols-1 items-center gap-10 overflow-hidden bg-ink px-6 py-28 sm:px-10 sm:py-32 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:px-16"
+      className="relative grid min-h-screen grid-cols-1 items-center gap-10 overflow-hidden px-6 py-28 sm:px-10 sm:py-32 lg:grid-cols-[1.3fr_1fr] lg:gap-16 lg:px-16"
     >
       {/* ── Text column ──────────────────────────────────────────────── */}
       <div className="relative z-10 order-2 lg:order-1">
         <h1
-          className="font-display font-black leading-[0.92] tracking-[-0.04em] text-paper"
+          className="font-display font-black leading-[0.92] tracking-[-0.04em] text-espresso"
           style={{ fontSize: "clamp(2.5rem, 7vw, 6.5rem)" }}
         >
           {HEADLINE.map((line, i) => (
@@ -65,29 +65,34 @@ export default function Hero() {
           <Magnetic strength={0.25}>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2.5 rounded-full border border-paper/20 px-7 py-4 text-sm font-semibold tracking-wide text-paper transition-colors duration-300 hover:border-paper/50"
+              className="group inline-flex items-center gap-2.5 rounded-full border border-espresso/20 px-7 py-4 text-sm font-semibold tracking-wide text-espresso transition-colors duration-300 hover:border-espresso/50"
             >
               Get in touch
               <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
             </a>
           </Magnetic>
+
+          <Magnetic strength={0.25}>
+            <a
+              href="/resume/Joshua_Mmbando_Resume.pdf"
+              download
+              className="group inline-flex items-center gap-2.5 px-1 py-4 text-sm font-semibold tracking-wide text-espresso/70 transition-colors duration-300 hover:text-espresso"
+            >
+              Download résumé
+              <span aria-hidden className="inline-block transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+            </a>
+          </Magnetic>
         </motion.div>
       </div>
 
-      {/* ── Photo panel — its own contained zone, never overlapped by text ── */}
+      {/* ── Lottie illustration ──────────────────────────────────────── */}
       <motion.div
-        className="relative order-1 aspect-[4/5] w-full overflow-hidden rounded-3xl lg:order-2 lg:aspect-auto lg:h-[70vh]"
+        className="relative order-1 flex justify-center lg:order-2 lg:h-[70vh] lg:items-center"
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2, ease: EASE }}
       >
-        <Image
-          src="/home/me-hero.png"
-          alt="Joshua Mmbando"
-          fill
-          className="object-cover object-top"
-          priority
-        />
+        <LottieCharacter src="/music.json" size={460} mobileSize={220} mobileBreakpoint={1024} />
       </motion.div>
     </section>
   );

@@ -15,8 +15,7 @@ export default function Contact() {
       <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-12">
         {/* Character — above the text on mobile, beside it on desktop */}
         <div className="flex shrink-0 flex-col items-center md:order-2 md:w-[240px]">
-          <LottieCharacter size={180} className="md:hidden" />
-          <LottieCharacter size={240} className="hidden md:block" />
+          <LottieCharacter size={240} mobileSize={180} mobileBreakpoint={768} />
           <p className="mt-3 font-display text-sm italic text-espresso/50">
             Let&apos;s hop on this together.
           </p>
